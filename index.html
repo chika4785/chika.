@@ -1,0 +1,1085 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AYHOMES Real Estate | Invest With Confidence</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    line-height: 1.6;
+    background: #fff;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0b3d2e;
+    color: white;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,.15);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #f5b400;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f5b400;
+}
+
+.menu {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 70px 7%;
+    color: white;
+
+    background:
+    linear-gradient(rgba(11,61,46,.82), rgba(11,61,46,.65)),
+    url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #f5b400;
+}
+
+.hero p {
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: #f5b400;
+    color: #0b3d2e;
+}
+
+.btn-primary:hover {
+    background: white;
+}
+
+.btn-dark {
+    background: #0b3d2e;
+    color: white;
+}
+
+.btn-dark:hover {
+    background: #f5b400;
+    color: #0b3d2e;
+}
+
+/* ================= GENERAL ================= */
+
+section {
+    padding: 80px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: #0b3d2e;
+}
+
+.section-title p {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+    background: #f5f8f6;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #0b3d2e;
+    margin-bottom: 10px;
+}
+
+/* ================= PROPERTIES ================= */
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.property {
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    transition: .3s;
+}
+
+.property:hover {
+    transform: translateY(-8px);
+}
+
+.property img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.property-content {
+    padding: 25px;
+}
+
+.property-content h3 {
+    color: #0b3d2e;
+    margin-bottom: 10px;
+}
+
+.location {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d18f00;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+    background: #f5f8f6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about h2 {
+    color: #0b3d2e;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    margin-bottom: 18px;
+    color: #555;
+}
+
+.check {
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+/* ================= INVESTMENT ================= */
+
+.investment {
+    background:
+    linear-gradient(rgba(11,61,46,.94),rgba(11,61,46,.94)),
+    url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.investment h2 {
+    font-size: 42px;
+    color: #f5b400;
+    margin-bottom: 15px;
+}
+
+.investment p {
+    max-width: 800px;
+    margin: auto;
+}
+
+.investment-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.investment-card {
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.25);
+    padding: 25px 10px;
+    border-radius: 10px;
+}
+
+.investment-card h3 {
+    color: #f5b400;
+    font-size: 28px;
+}
+
+/* ================= WHY US ================= */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.why-card {
+    padding: 30px;
+    border-left: 5px solid #f5b400;
+    background: #f7f7f7;
+}
+
+.why-card h3 {
+    color: #0b3d2e;
+    margin-bottom: 10px;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials {
+    background: #f5f8f6;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.testimonial {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.stars {
+    color: #f5b400;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.testimonial h4 {
+    margin-top: 15px;
+    color: #0b3d2e;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact h2 {
+    font-size: 40px;
+    color: #0b3d2e;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+}
+
+.contact-form {
+    background: #f5f8f6;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #06271e;
+    color: white;
+    padding: 55px 7% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+footer h3 {
+    color: #f5b400;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin: 8px 0;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f5b400;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,.2);
+    padding-top: 20px;
+    text-align: center;
+    color: #aaa;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 900px) {
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0b3d2e;
+        flex-direction: column;
+        padding: 25px 7%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .service-grid,
+    .property-grid,
+    .why-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .investment-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 550px) {
+
+    .hero {
+        min-height: 570px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .service-grid,
+    .property-grid,
+    .why-grid,
+    .testimonial-grid,
+    .investment-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        AY<span>HOMES</span>
+    </div>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+
+    <nav>
+        <ul id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#investment">Investment</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Your Future Starts With
+            <span>AYHOMES</span>
+        </h1>
+
+        <p>
+            Genuine land sales, beautiful homes and smart
+            real estate investment opportunities.
+            Invest with confidence and build your future.
+        </p>
+
+        <a href="#properties" class="btn btn-primary">
+            Explore Properties
+        </a>
+
+        <a href="#contact" class="btn btn-dark">
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+    <div class="section-title">
+        <h2>Our Real Estate Services</h2>
+        <p>Simple, transparent and professional property solutions.</p>
+    </div>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <div class="service-icon">🌍</div>
+            <h3>Genuine Land Sales</h3>
+            <p>
+                Discover land opportunities suitable for
+                investment, development and future growth.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🏠</div>
+            <h3>Beautiful Homes</h3>
+            <p>
+                Find well-designed homes for comfortable
+                living and long-term value.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📈</div>
+            <h3>Investment</h3>
+            <p>
+                Explore real estate opportunities designed
+                around your financial goals.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🔑</div>
+            <h3>Property Management</h3>
+            <p>
+                Professional support for property owners
+                and investors.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PROPERTIES ================= -->
+
+<section id="properties">
+
+    <div class="section-title">
+        <h2>Featured Properties</h2>
+        <p>Explore some of our property opportunities.</p>
+    </div>
+
+    <div class="property-grid">
+
+        <div class="property">
+
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80">
+
+            <div class="property-content">
+
+                <h3>Luxury Family Home</h3>
+
+                <div class="location">
+                    📍 Lagos, Nigeria
+                </div>
+
+                <p>
+                    Spacious and modern home suitable for
+                    family living.
+                </p>
+
+                <div class="price">
+                    Contact for Price
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="property">
+
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80">
+
+            <div class="property-content">
+
+                <h3>Well-Furnished Apartment</h3>
+
+                <div class="location">
+                    📍 Lagos, Nigeria
+                </div>
+
+                <p>
+                    Modern furnished apartment with
+                    premium finishing.
+                </p>
+
+                <div class="price">
+                    Contact for Price
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="property">
+
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80">
+
+            <div class="property-content">
+
+                <h3>Investment Land</h3>
+
+                <div class="location">
+                    📍 Nigeria
+                </div>
+
+                <p>
+                    Strategic land opportunity for
+                    investors and future development.
+                </p>
+
+                <div class="price">
+                    Contact for Price
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div>
+        <img
+        src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80"
+        alt="AYHOMES Real Estate">
+    </div>
+
+    <div>
+
+        <h2>About AYHOMES</h2>
+
+        <p>
+            AYHOMES is focused on helping individuals and
+            families discover real estate opportunities that
+            can support their dreams and financial goals.
+        </p>
+
+        <p>
+            From genuine land sales to well-furnished homes,
+            we aim to make property ownership and investment
+            easier to understand.
+        </p>
+
+        <div class="check">✓ Genuine property opportunities</div>
+        <div class="check">✓ Professional service</div>
+        <div class="check">✓ Investment-focused solutions</div>
+        <div class="check">✓ Customer-focused approach</div>
+
+    </div>
+
+</section>
+
+<!-- ================= INVESTMENT ================= -->
+
+<section class="investment" id="investment">
+
+    <h2>Invest With Confidence</h2>
+
+    <p>
+        Ask our team about available investment opportunities,
+        terms and conditions, and how they may fit your goals.
+    </p>
+
+    <div class="investment-grid">
+
+        <div class="investment-card">
+            <h3>8%</h3>
+            <p>3 Months</p>
+        </div>
+
+        <div class="investment-card">
+            <h3>20%</h3>
+            <p>6 Months</p>
+        </div>
+
+        <div class="investment-card">
+            <h3>45%</h3>
+            <p>12 Months</p>
+        </div>
+
+        <div class="investment-card">
+            <h3>70%</h3>
+            <p>18 Months</p>
+        </div>
+
+        <div class="investment-card">
+            <h3>95%</h3>
+            <p>24 Months</p>
+        </div>
+
+    </div>
+
+    <p style="margin-top:25px;font-size:14px;">
+        *Investment figures shown are promotional examples and
+        should not be treated as guaranteed returns. Verify all
+        terms, risks, eligibility and documentation with AYHOMES
+        before making an investment.
+    </p>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section>
+
+    <div class="section-title">
+        <h2>Why Choose AYHOMES?</h2>
+        <p>Building confidence one property at a time.</p>
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <h3>🏆 Professional</h3>
+            <p>
+                We strive to provide professional guidance
+                throughout your property journey.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>🔍 Transparency</h3>
+            <p>
+                Clear information helps clients make
+                informed property decisions.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>📊 Investment Focus</h3>
+            <p>
+                We help clients explore property opportunities
+                with long-term value in mind.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="testimonials">
+
+    <div class="section-title">
+        <h2>What Our Clients Say</h2>
+        <p>Sample testimonials for demonstration.</p>
+    </div>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "AYHOMES made the property process much easier
+                for me. The team was helpful and professional."
+            </p>
+
+            <h4>— Happy Client</h4>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "I was looking for a property investment and
+                received useful information to guide my decision."
+            </p>
+
+            <h4>— Property Investor</h4>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Excellent customer service and a very pleasant
+                property-buying experience."
+            </p>
+
+            <h4>— Satisfied Client</h4>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="contact-info">
+
+        <h2>Let's Find Your Property</h2>
+
+        <p>
+            Ready to own land, buy a home or learn more about
+            available investment opportunities?
+        </p>
+
+        <p>
+            📞 <strong>Phone:</strong>
+            +234 812 778 8763
+        </p>
+
+        <p>
+            ✉️ <strong>Email:</strong>
+            chika.azubuike62@gmail.com
+        </p>
+
+        <p>
+            📍 <strong>Location:</strong>
+            Lagos, Nigeria
+        </p>
+
+        <a
+        href="tel:+2348127788763"
+        class="btn btn-primary">
+            Call Us
+        </a>
+
+    </div>
+
+    <div class="contact-form">
+
+        <form onsubmit="sendMessage(event)">
+
+            <input
+            type="text"
+            placeholder="Full Name"
+            required>
+
+            <input
+            type="email"
+            placeholder="Email Address"
+            required>
+
+            <input
+            type="tel"
+            placeholder="Phone Number"
+            required>
+
+            <select required>
+
+                <option value="">
+                    What are you interested in?
+                </option>
+
+                <option>
+                    Land
+                </option>
+
+                <option>
+                    Furnished Home
+                </option>
+
+                <option>
+                    Property Investment
+                </option>
+
+                <option>
+                    Property Management
+                </option>
+
+            </select>
+
+            <textarea
+            placeholder="Your Message"
+            required></textarea>
+
+            <button
+            type="submit"
+            class="btn btn-dark">
+                Send Enquiry
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="logo">
+                AY<span>HOMES</span>
+            </div>
+
+            <p style="margin-top:15px;">
+                Genuine land sales, well-furnished houses
+                and real estate investment solutions.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Services</h3>
+
+            <ul>
+                <li>Land Sales</li>
+                <li>Homes</li>
+                <li>Investment</li>
+                <li>Property Management</li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <ul>
+                <li>+234 812 778 8763</li>
+                <li>chika.azubuike62@gmail.com</li>
+                <li>Lagos, Nigeria</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 AYHOMES Real Estate.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+<script>
+
+function toggleMenu() {
+
+    document
+    .getElementById("navMenu")
+    .classList.toggle("active");
+
+}
+
+function sendMessage(event) {
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for contacting AYHOMES! " +
+        "Your enquiry has been received."
+    );
+
+    event.target.reset();
+
+}
+
+</script>
+
+</body>
+</html>
+```
